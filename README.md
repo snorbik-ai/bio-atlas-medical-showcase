@@ -89,16 +89,25 @@ Bio-Atlas includes a deterministic test suite covering 5 landmark oncological mu
 
 ---
 
-## 🔌 6. Model Context Protocol (MCP) Architecture (8 Tools)
+## 🔌 6. Model Context Protocol (MCP) Architecture (15 Tools)
 
-1. `bio_medic_get_pipelines` — Navigation compass guiding agent actions.
+Bio-Atlas is exposed through the **Model Context Protocol (MCP)**, allowing AI IDEs (Claude Desktop, Antigravity, Cursor) and autonomous agents to invoke 15 biomedical tools via standardized JSON-RPC 2.0 stdio:
+
+1. `bio_medic_get_pipelines` — Navigation compass guiding agent actions (INV-07).
 2. `bio_medic_patient_intake` — GDPR/HIPAA-compliant ingestion & SHA-256 pseudonymization.
-3. `bio_medic_vcf_genomic_scan` — Variant filtering and ClinVar clinical impact scoring.
-4. `bio_medic_pdb_structure_fetch` — Deterministic PDB parser and macromolecule indexer.
-5. `bio_medic_3d_mutation_map` — 3D spatial mapping of mutated residues $(X, Y, Z)$.
-6. `bio_medic_telemetry_digest` — Laboratory bench sensors and anomaly alerts.
-7. `bio_medic_export_clinical_report` — Sealed diagnostic digest and JSON export.
-8. `bio_medic_render_gui` — Dynamic bioStations interactive 3D WebGL workstation viewport (spawns autonomous live HTTP server at `http://localhost:8529/` with real-time polling and auto-browser launch).
+3. `bio_medic_document_ingest` — Clinical PDF/DOCX/MD extraction via **Docling** + local NER & PII redaction.
+4. `bio_medic_vcf_validate` — VCF v4.2/v4.3 structural Quality Control (QC).
+5. `bio_medic_vcf_genomic_scan` — Variant parsing (`AF`/`VAF`, `DP`, `AD`, `CLNSIG`, `ANN`) without invented data.
+6. `bio_medic_benchmark_run` — Deterministic **SEQC2 HCC1395** truth-set evaluation in High-Confidence BED regions (`TP`/`FP`/`FN`/F1).
+7. `bio_medic_civic_lookup` — Live **CIViC GraphQL v2** actionable clinical evidence, therapies & PMIDs.
+8. `bio_medic_pdb_structure_fetch` — Deterministic RCSB PDB parser and macromolecule indexer.
+9. `bio_medic_3d_mutation_map` — 3D spatial mapping of mutated residues $(X, Y, Z)$.
+10. `bio_medic_telemetry_digest` — Laboratory bench sensors and anomaly alerts.
+11. `bio_medic_export_clinical_report` — Sealed diagnostic digest and JSON export.
+12. `bio_medic_ai_synthesize` — Grounded clinical synthesis (`OpenAI`/`Gemini` or explicit `LLM_NON_CONFIGURE` deterministic mode).
+13. `bio_medic_render_gui` — Design System v1.0 3-zone Workstation (`320px | Flexible | 360px`) with Three.js WebGL 3D & Prism/PDF drawer (`http://localhost:8529/`).
+14. `bio_medic_get_session_context` — ASCA active session context resolver.
+15. `bio_medic_inspect_production_file` — Safe inspection of real session artifacts (`.vcf`, `.json`, `.pdb`, `.log`, `.pdf`).
 
 ---
 

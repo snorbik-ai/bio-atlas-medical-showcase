@@ -8,11 +8,19 @@
 - Compliance: European GDPR Art. 9, HIPAA Health Data Privacy by Design (immediate PII stripping, SHA-256 pseudonymization)
 - Full Documentation: https://github.com/snorbik-ai/bio-atlas-medical-showcase/blob/main/llms-full.txt
 
-## Tools Exposed
-- bio_medic_get_pipelines: Compass guiding AI agents through 3 recommended sequential pipelines.
-- bio_medic_patient_intake: Ingestion and cryptographic pseudonymization of patient data.
-- bio_medic_vcf_genomic_scan: Parsing Variant Call Format (VCF) files for oncogenic hotspot mutations.
+## Tools Exposed (15 MCP Tools)
+- bio_medic_get_pipelines: Compass guiding AI agents through 5 recommended sequential pipelines (INV-07).
+- bio_medic_patient_intake: Ingestion and cryptographic pseudonymization of patient data (GDPR Art. 9).
+- bio_medic_document_ingest: Clinical PDF/DOCX/MD extraction via Docling + local biomedical NER & PII redaction.
+- bio_medic_vcf_validate: VCF v4.2/v4.3 structural Quality Control (QC).
+- bio_medic_vcf_genomic_scan: Parsing Variant Call Format (VCF) files (AF/VAF, DP, AD, CLNSIG) without invented variants.
+- bio_medic_benchmark_run: Deterministic SEQC2 HCC1395 truth-set comparison in High-Confidence BED regions.
+- bio_medic_civic_lookup: Live CIViC GraphQL v2 actionable oncology evidence, therapies, and PMIDs.
 - bio_medic_pdb_structure_fetch: Deterministic Protein Data Bank (PDB) structure retrieval.
 - bio_medic_3d_mutation_map: 3D spatial coordinate projection (X, Y, Z) of mutated amino acid residues.
 - bio_medic_telemetry_digest: Laboratory bench telemetry monitoring and sensor anomaly detection.
-- bio_medic_export_clinical_report: Sealed diagnostic report generation and Golden Output validation.
+- bio_medic_export_clinical_report: Sealed diagnostic report generation.
+- bio_medic_ai_synthesize: Fact-grounded clinical synthesis (OpenAI/Gemini or explicit deterministic fallback).
+- bio_medic_render_gui: Design System v1.0 3-zone Workstation with Three.js WebGL 3D & Prism/PDF drawer.
+- bio_medic_get_session_context: ASCA active session context resolver.
+- bio_medic_inspect_production_file: Safe inspection of real session artifacts.
