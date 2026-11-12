@@ -53,7 +53,7 @@ Bio-Atlas pairs its analytical engine with the **bioStations** laboratory interf
 * **Reagent Concentration :** $0.024\ mol/L$ (`STABLE`)
 * **Spectral Oscillation :** $982.1\ Hz$ (`ANOMALY SPIKE DETECTION`)
 * **Live Auditing :** Real-time event logging and status cards in an ergonomic Neumorphic "Blue Night" visual palette (`#12161F`, `#1C212E`, `#7DCCFF`).
-8. io_medic_render_gui — Dynamic bioStations interactive 3D WebGL workstation viewport.
+8. io_medic_render_gui — Dynamic bioStations interactive 3D WebGL workstation viewport (spawns an autonomous live HTTP server at http://localhost:8529/ with real-time polling and auto-browser launch).
 
 ---
 
@@ -85,7 +85,7 @@ Bio-Atlas is exposed through the **Model Context Protocol (MCP)**, allowing AI I
 5. `bio_medic_3d_mutation_map` — 3D spatial mapping of mutated residues.
 6. `bio_medic_telemetry_digest` — Laboratory bench sensors and anomaly alerts.
 7. `bio_medic_export_clinical_report` — Sealed diagnostic digest and export.
-8. io_medic_render_gui — Dynamic bioStations interactive 3D WebGL workstation viewport.
+8. io_medic_render_gui — Dynamic bioStations interactive 3D WebGL workstation viewport (spawns an autonomous live HTTP server at http://localhost:8529/ with real-time polling and auto-browser launch).
 
 ---
 
