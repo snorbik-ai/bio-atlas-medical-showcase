@@ -1,0 +1,33 @@
+# .gitignore Protecteur Snorbik Patrimoine
+# Bloque les fichiers > 100 Mo et fichiers confidentiels
+
+*.pt
+*.pth
+*.bin
+*.onnx
+*.safetensors
+*.ckpt
+*.h5
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.wav
+*.mp3
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+node_modules/
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+.env
+.env.local
+.DS_Store
+Thumbs.db

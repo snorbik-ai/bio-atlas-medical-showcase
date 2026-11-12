@@ -1,0 +1,18 @@
+# Bio-Atlas Medical Showcase
+
+> Sovereign Biomedical Intelligence, Genomic Variant Screening & 3D Macromolecular Visualizer by SNORBIK Studio.
+
+## Project Details
+- Architecture: Model Context Protocol (MCP) Tri-Canal (JSON-RPC 2.0 stdio, CLI, Python In-Process SDK)
+- Clinical Focus: Precision Oncology, TP53 Genomic Mutations (R248W), PDB Macromolecular 3D Modeling, bioStations Telemetry
+- Compliance: European GDPR Art. 9, HIPAA Health Data Privacy by Design (immediate PII stripping, SHA-256 pseudonymization)
+- Full Documentation: https://github.com/snorbik-ai/bio-atlas-medical-showcase/blob/main/llms-full.txt
+
+## Tools Exposed
+- bio_medic_get_pipelines: Compass guiding AI agents through 3 recommended sequential pipelines.
+- bio_medic_patient_intake: Ingestion and cryptographic pseudonymization of patient data.
+- bio_medic_vcf_genomic_scan: Parsing Variant Call Format (VCF) files for oncogenic hotspot mutations.
+- bio_medic_pdb_structure_fetch: Deterministic Protein Data Bank (PDB) structure retrieval.
+- bio_medic_3d_mutation_map: 3D spatial coordinate projection (X, Y, Z) of mutated amino acid residues.
+- bio_medic_telemetry_digest: Laboratory bench telemetry monitoring and sensor anomaly detection.
+- bio_medic_export_clinical_report: Sealed diagnostic report generation and Golden Output validation.

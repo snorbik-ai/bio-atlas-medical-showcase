@@ -1,0 +1,25 @@
+# Bio-Atlas Medical Showcase — Full System & Architectural Specification
+
+## Executive Profile
+- Name: Bio-Atlas Medical Showcase
+- Organization: SNORBIK Studio (https://snorbik.com)
+- Domain: Biomedical Engineering, Genomic Sequencing (VCF), Macromolecular 3D Modeling (PDB), Health Data Security (GDPR/HIPAA)
+- Protocol: Model Context Protocol (MCP) by Anthropic / Snorbik Sovereign Edition
+- Repository: https://github.com/snorbik-ai/bio-atlas-medical-showcase
+
+## Core Philosophy
+Bio-Atlas eliminates LLM hallucination in scientific domains by enforcing a strict division between:
+1. The Probabilistic AI Pilot (Semantic interpretation, clinical triage, workflow orchestration)
+2. The Deterministic Engine (Pure-Python local execution, exact mathematical calculation of atomic coordinates, PII scrubbing)
+
+## Clinical & Genomic Workflows
+1. Genomic Variant Ingestion:
+   Supports VCF 4.2 formats. Detects single nucleotide variants (SNVs), indel mutations, and identifies pathogenic hotspots such as TP53 c.742C>T (p.Arg248Trp) in the DNA-binding domain.
+2. Macromolecular 3D Structure Parsing:
+   Extracts exact Cartesian coordinates (X, Y, Z) and temperature factors from official Protein Data Bank (PDB) records (e.g., 1TUP, 1HHO, INS).
+3. 3D Spatial Mutation Mapping:
+   Calculates spatial bounding boxes and highlights mutated amino acid residues for real-time visualization in WebGL/Three.js environments.
+4. Laboratory Telemetry (bioStations):
+   Monitors physical bench sensors including fluorescence intensity (cd/m2), reagent concentration (mol/L), and oscillation frequency (Hz) with automated anomaly classification.
+5. Privacy by Design:
+   Enforces immediate destruction of plain-text patient identities and replaces them with audit-proof pseudonymized signatures (MED-ANON-[UUID8]).
