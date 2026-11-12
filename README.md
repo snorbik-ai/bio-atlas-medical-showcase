@@ -1,5 +1,7 @@
 # 🩺 Bio-Atlas Medical Showcase
 
+![Bio-Atlas Workstation Live Demo](assets/bio_atlas_demo.gif)
+
 ![Bio-Atlas Medical Orchestrator](assets/thumbnail.png)
 
 > **Sovereign Biomedical Intelligence, Genomic Variant Screening & 3D Macromolecular Visualizer**  
@@ -11,6 +13,14 @@
 [![Compliance](https://img.shields.io/badge/Privacy-GDPR_Art.9_%26_HIPAA-purple.svg)]()
 [![Protocol](https://img.shields.io/badge/Standard-Model_Context_Protocol_(MCP)-orange.svg)]()
 [![Architecture](https://img.shields.io/badge/Core-Snorbik_Sovereign_AI-grey.svg)]()
+
+---
+
+## 🖥️ Live Workstation Interface (BioStation Pro v1.0.0)
+
+![BioStation Pro 3D Workstation — TP53 PDB 1TUP](assets/biostation_pro_3d_workstation.jpg)
+
+*3-zone Clinical Workstation (`320px` Sidebar | `Flexible` 3D WebGL Three.js Canvas | `360px` Production Explorer) displaying real RCSB PDB `1TUP` macromolecule with mutated residue `Arg248Trp` highlighted in crimson/amber.*
 
 ---
 
