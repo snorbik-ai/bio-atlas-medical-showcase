@@ -45,13 +45,15 @@ The showcase includes a verified benchmark analyzing the tumor suppressor gene *
 
 ---
 
-## 🖥️ Interactive Workstation: `bioStations` Telemetry
+## 🖥️ Interactive Workstation: `bioStations` Telemetry & Porte 4 3D WebGL
 
-Bio-Atlas pairs its analytical engine with the **bioStations** laboratory interface:
+Bio-Atlas pairs its analytical engine with the **bioStations** laboratory interface and an integrated **Three.js WebGL 3D Workstation (Porte 4)**:
+* **Interactive 3D Protein Canvas :** Real-time spatial rendering of PDB structures (e.g. `1TUP`) with orbiting camera and pulsating highlights over mutated oncogenic residues (`TP53 R248W`).
 * **Fluorescence Intensity :** $142.8\ cd/m^2$ (`OPTIMAL`)
 * **Reagent Concentration :** $0.024\ mol/L$ (`STABLE`)
 * **Spectral Oscillation :** $982.1\ Hz$ (`ANOMALY SPIKE DETECTION`)
 * **Live Auditing :** Real-time event logging and status cards in an ergonomic Neumorphic "Blue Night" visual palette (`#12161F`, `#1C212E`, `#7DCCFF`).
+* **Automated Post-Session Trigger :** Tool `bio_medic_render_gui` automatically compiles the full session state into an interactive local workstation upon session closure.
 
 ---
 
