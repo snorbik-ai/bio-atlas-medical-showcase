@@ -3,7 +3,8 @@
 ![Bio-Atlas Medical Orchestrator](assets/thumbnail.png)
 
 > **Sovereign Biomedical Intelligence, Genomic Variant Screening & 3D Macromolecular Visualizer**  
-> *A next-generation clinical decision-support ecosystem engineered by SNORBIK Studio.*
+> *A next-generation clinical decision-support ecosystem engineered by SNORBIK Studio.*  
+> *Live Web Workstation: `http://localhost:8529/`*
 
 [![Domain](https://img.shields.io/badge/Domain-Biomedical_%26_Genomics-blue.svg)]()
 [![Status](https://img.shields.io/badge/Status-Public_Showcase-emerald.svg)]()
@@ -13,54 +14,66 @@
 
 ---
 
-## 🌟 Executive Summary
+## 🎯 1. Why Bio-Atlas Exists & What Real Problem It Solves
 
-**Bio-Atlas Medical Showcase** demonstrates how modern Artificial Intelligence can be seamlessly combined with deterministic biomedical computation without compromising patient privacy or scientific precision.
+In modern clinical oncology and medical genetics, interpreting High-Throughput Genomic Sequencing data (NGS `.vcf` files) and projecting mutations onto protein 3D structures is critical for targeted therapy selection. However, clinicians face three major bottlenecks:
 
-In mission-critical healthcare workflows, Large Language Models (LLMs) must **never hallucinate** anatomical coordinates, drug dosages, or genetic mutations. Bio-Atlas introduces a foundational dual architecture:
-1. **The Semantic Brain (AI Agent / LLM) :** Interprets clinician inquiries, reviews clinical histories, and selects appropriate diagnostic pipelines.
-2. **The Deterministic Engine (Local Scientific Core) :** Executes exact atomic computations, parses official Protein Data Bank (PDB) structures, screens genomic variants (VCF), and enforces irrevocable data anonymization.
+1. **The Cloud Privacy & Legal Barrier :**  
+   Under European GDPR (Article 9) and HIPAA regulations, clinicians are strictly forbidden from uploading patient names and genetic sequencing to cloud-based LLMs (e.g. ChatGPT, Claude).
+2. **The Lethal Risk of LLM Hallucinations :**  
+   Pure probabilistic text models predict words, not atomic stereochemistry. An AI that hallucinates molecular coordinates or drug dosages creates catastrophic medical and liability risks.
+3. **The "Prompt Engineering" Rejection :**  
+   Doctors do not have the time to copy-paste libraries of 40 complex prompts. The tool must operate deterministically with **zero prompt fatigue**.
 
----
-
-## 🛡️ Privacy by Design: Irrevocable Health Data Protection
-
-Healthcare data demands zero-trust compliance under European GDPR (Article 9) and international HIPAA standards.
-
-Bio-Atlas applies a strict three-tier cellular isolation model:
-* **The Membrane (Intake) :** Intercepts raw patient information and strips all Personally Identifiable Information (PII) before any data touches the AI context.
-* **The Cytoplasm (Anonymization) :** Salts and computes a irreversible SHA-256 hash, generating an audit-proof pseudonymized ID (`MED-ANON-[UUID]`).
-* **The Nucleus (Secure Vault) :** Stores clinical records in encrypted local vaults with zero plain-text leaks to external networks.
+**Bio-Atlas solves this** through a sovereign, local "Dual-Brain" architecture:
+* **The Semantic Brain (AI Agent) :** Understands clinical intents and orchestrates tools.
+* **The Deterministic Core (Sovereign MCP) :** Runs local irreversible anonymization, parses official RCSB PDB files and ClinVar records, and renders interactive 3D structures on a dedicated local web server (`http://localhost:8529/`).
 
 ---
 
-## 🔬 Clinical Benchmark Case: Precision Oncology (`TP53`)
+## 🛡️ 2. How GDPR & Patient Privacy Are Enforced in Source Code
 
-The showcase includes a verified benchmark analyzing the tumor suppressor gene **TP53** (the "Guardian of the Genome"):
-
-* **Genomic Variant :** `chr17:7577538` (`c.742C>T`)
-* **Protein Consequence :** `p.Arg248Trp` (Hotspot missense alteration R248W)
-* **Clinical Significance :** Pathogenic gain-of-function mutation affecting the DNA-binding domain
-* **3D Structural Mapping :** Exact spatial projection onto the PDB structure `1TUP` (p53-DNA core domain complex), isolating the mutated residue 248 with 3D atomic coordinates $(X, Y, Z)$ for real-time WebGL/Three.js rendering.
+Patient data protection is not marketing rhetoric; it is physically enforced at the architectural layer:
+* **Volatile RAM Destruction :** Upon patient intake, the patient's name (`raw_name`) is consumed into a one-way salted SHA-256 hash. The plain-text name is immediately dropped from memory and never returned in the response entity.
+* **Irreversible Pseudonymization :** The system assigns a sealed identifier (`MED-ANON-[UUID8]`).
+* **Zero PII Exposure :** Session states (`state.json`), audit logs, and AI context memories contain strictly zero Personally Identifiable Information (PII). No health data ever leaves the local machine.
 
 ---
 
-## 🖥️ Interactive Workstation: `bioStations` Telemetry & Porte 4 3D WebGL
+## ⚡ 3. The "Zero-Prompt" Paradigm: How to Command Without Complex Prompts
 
-Bio-Atlas pairs its analytical engine with the **bioStations** laboratory interface and an integrated **Three.js WebGL 3D Workstation (Porte 4)**:
-* **Interactive 3D Protein Canvas :** Real-time spatial rendering of PDB structures (e.g. `1TUP`) with orbiting camera and pulsating highlights over mutated oncogenic residues (`TP53 R248W`).
-* **Fluorescence Intensity :** $142.8\ cd/m^2$ (`OPTIMAL`)
-* **Reagent Concentration :** $0.024\ mol/L$ (`STABLE`)
-* **Spectral Oscillation :** $982.1\ Hz$ (`ANOMALY SPIKE DETECTION`)
-* **Live Auditing :** Real-time event logging and status cards in an ergonomic Neumorphic "Blue Night" visual palette (`#12161F`, `#1C212E`, `#7DCCFF`).
-8. io_medic_render_gui — Dynamic bioStations interactive 3D WebGL workstation viewport (spawns an autonomous live HTTP server at http://localhost:8529/ with real-time polling and auto-browser launch).
+Clinicians do not write code or multi-paragraph prompt instructions. Bio-Atlas offers 3 frictionless command channels:
+
+* **Channel 1 — Single Clinical Intent (AI Voice / Chat) :**  
+  The physician states: *"Run oncological screening on patient Dupont for TP53."*  
+  The agent queries the `bio_medic_get_pipelines` compass tool and automatically executes the exact 8-step pipeline without human micromanagement.
+* **Channel 2 — 1-Click Laboratory Pipeline (CLI) :**  
+  ```bash
+  # Execute the 5 gold standard benchmarks and launch the browser immediately
+  python run_benchmarks.py --open
+  ```
+* **Channel 3 — Autonomous Interactive 3D Workstation (`http://localhost:8529/`) :**  
+  The local web server starts automatically and opens the default browser. Clinicians interact via mouse controls (3D orbit rotation, wheel zoom onto the mutated residue) while real-time polling (`/api/latest`) updates metrics dynamically without manual reloads.
 
 ---
 
+## 🔬 4. Two Real-World Clinical Scenarios
+
+### Scenario 1: Dr. Sarah Benali (Medical Oncologist)
+* **Clinical Case :** 42-year-old female patient with high-grade serous ovarian adenocarcinoma and suspected hereditary Li-Fraumeni syndrome.
+* **Clinical Challenge :** Rapidly determine whether the *TP53* mutation disrupts the core DNA-binding domain.
+* **Execution :** The VCF file is scanned under pseudonym `MED-ANON-705A0D`. Variant `c.742C>T` (`p.Arg248Trp`) is flagged as **Pathogenic** (ClinVar VCV000012347).
+* **3D Output :** The official crystallographic structure `1TUP` (5,828 atoms) appears on screen. Mutated residue 248 is illuminated in bright red directly at the DNA major groove contact point, immediately ready for multidisciplinary team (MDT) presentation.
+
+### Scenario 2: Dr. Marc Vanhove (Molecular Geneticist)
+* **Clinical Case :** 64-year-old male with stage IV non-small cell lung adenocarcinoma (NSCLC).
+* **Clinical Challenge :** Confirm the presence of activating mutation *EGFR L858R* in exon 21 to prescribe 3rd-generation tyrosine kinase inhibitors (Osimertinib).
+* **Execution :** Automated background pipeline parses PDB `2ITY` (2,446 atoms) complexed with Gefitinib, mapping the leucine-to-arginine substitution in the activation loop.
+* **Output :** Sealed clinical audit report `CLIN-REP-20261112-A99BBC.json` is archived for PACS/EMR integration with zero cloud data transmission.
 
 ---
 
-## 📊 Gold Standard Clinical Benchmarks Suite (Verified RCSB PDB & ClinVar)
+## 📊 5. Gold Standard Clinical Benchmarks Suite (Verified RCSB PDB & ClinVar)
 
 Bio-Atlas includes a deterministic test suite covering 5 landmark oncological mutations verified against official public repositories:
 
@@ -74,22 +87,22 @@ Bio-Atlas includes a deterministic test suite covering 5 landmark oncological mu
 
 *All macromolecular structures are deterministically parsed from official .pdb files with verified SHA-256 provenance.*
 
-## 🔌 Model Context Protocol (MCP) Architecture
+---
 
-Bio-Atlas is exposed through the **Model Context Protocol (MCP)**, allowing AI IDEs (Claude Desktop, Antigravity, Cursor) and autonomous agents to invoke biomedical tools via standardized JSON-RPC 2.0 stdio:
+## 🔌 6. Model Context Protocol (MCP) Architecture (8 Tools)
 
 1. `bio_medic_get_pipelines` — Navigation compass guiding agent actions.
-2. `bio_medic_patient_intake` — GDPR/HIPAA-compliant ingestion & hashing.
-3. `bio_medic_vcf_genomic_scan` — Variant filtering and clinical impact scoring.
+2. `bio_medic_patient_intake` — GDPR/HIPAA-compliant ingestion & SHA-256 pseudonymization.
+3. `bio_medic_vcf_genomic_scan` — Variant filtering and ClinVar clinical impact scoring.
 4. `bio_medic_pdb_structure_fetch` — Deterministic PDB parser and macromolecule indexer.
-5. `bio_medic_3d_mutation_map` — 3D spatial mapping of mutated residues.
+5. `bio_medic_3d_mutation_map` — 3D spatial mapping of mutated residues $(X, Y, Z)$.
 6. `bio_medic_telemetry_digest` — Laboratory bench sensors and anomaly alerts.
-7. `bio_medic_export_clinical_report` — Sealed diagnostic digest and export.
-8. io_medic_render_gui — Dynamic bioStations interactive 3D WebGL workstation viewport (spawns an autonomous live HTTP server at http://localhost:8529/ with real-time polling and auto-browser launch).
+7. `bio_medic_export_clinical_report` — Sealed diagnostic digest and JSON export.
+8. `bio_medic_render_gui` — Dynamic bioStations interactive 3D WebGL workstation viewport (spawns autonomous live HTTP server at `http://localhost:8529/` with real-time polling and auto-browser launch).
 
 ---
 
-## 🤖 AI Indexing & Machine Readability
+## 🤖 7. AI Indexing & Machine Readability
 
 This public repository is natively indexed for AI search engines, agents, and web scrapers:
 * [**`llms.txt`**](./llms.txt) : Concise machine-readable summary following the LLMs.txt standard.
@@ -97,11 +110,11 @@ This public repository is natively indexed for AI search engines, agents, and we
 
 ---
 
-## 🤝 R&D Collaboration & Inquiries
+## 🤝 8. R&D Collaboration & Inquiries
 
 This project illustrates the research, development, and engineering capabilities of **SNORBIK Studio**.
 
-- 🌐 **Portfolio & Case Studies :** [https://snorbik.com](https://snorbik.com)
+- 🌐 **Portfolio & Case Studies :** [https://tayier.snorbik.com](https://tayier.snorbik.com)
 - 📬 **Medical Engineering Inquiries :** contact@snorbik.com
 
 ---
