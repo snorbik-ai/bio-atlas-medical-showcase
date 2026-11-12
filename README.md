@@ -68,6 +68,7 @@ Bio-Atlas is exposed through the **Model Context Protocol (MCP)**, allowing AI I
 5. `bio_medic_3d_mutation_map` — 3D spatial mapping of mutated residues.
 6. `bio_medic_telemetry_digest` — Laboratory bench sensors and anomaly alerts.
 7. `bio_medic_export_clinical_report` — Sealed diagnostic digest and export.
+8. io_medic_render_gui — Dynamic bioStations interactive 3D WebGL workstation viewport.
 
 ---
 
