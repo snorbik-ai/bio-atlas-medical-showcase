@@ -53,7 +53,7 @@ Bio-Atlas pairs its analytical engine with the **bioStations** laboratory interf
 * **Reagent Concentration :** $0.024\ mol/L$ (`STABLE`)
 * **Spectral Oscillation :** $982.1\ Hz$ (`ANOMALY SPIKE DETECTION`)
 * **Live Auditing :** Real-time event logging and status cards in an ergonomic Neumorphic "Blue Night" visual palette (`#12161F`, `#1C212E`, `#7DCCFF`).
-* **Automated Post-Session Trigger :** Tool `bio_medic_render_gui` automatically compiles the full session state into an interactive local workstation upon session closure.
+8. io_medic_render_gui — Dynamic bioStations interactive 3D WebGL workstation viewport.
 
 ---
 
