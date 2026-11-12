@@ -57,6 +57,23 @@ Bio-Atlas pairs its analytical engine with the **bioStations** laboratory interf
 
 ---
 
+
+---
+
+## 📊 Gold Standard Clinical Benchmarks Suite (Verified RCSB PDB & ClinVar)
+
+Bio-Atlas includes a deterministic test suite covering 5 landmark oncological mutations verified against official public repositories:
+
+| Benchmark | Gene | Real Mutation (HGVS) | Pathology | PDB ID | Real ATOM Count | Source |
+|---|---|---|---|---|---|---|
+| **BENCH-01** | TP53 | p.Arg248Trp (c.742C>T) | Li-Fraumeni / Ovarian Cancer | 1TUP | 5,828 atoms | ClinVar VCV000012347 / RCSB |
+| **BENCH-02** | BRAF | p.Val600Glu (c.1799T>A) | Metastatic Melanoma | 4MNE | 17,682 atoms | ClinVar VCV000013961 / RCSB |
+| **BENCH-03** | EGFR | p.Leu858Arg (c.2573T>G) | NSCLC Lung Adenocarcinoma | 2ITY | 2,446 atoms | ClinVar VCV000016618 / RCSB |
+| **BENCH-04** | KRAS | p.Gly12Asp (c.35G>A) | Pancreatic Ductal Adenocarcinoma | 4OBE | 5,725 atoms | ClinVar VCV000012582 / RCSB |
+| **BENCH-05** | BRCA1| p.Glu23ValfsTer17 | Hereditary Breast & Ovarian Cancer | 1JNX | 1,660 atoms | ClinVar VCV000017662 / RCSB |
+
+*All macromolecular structures are deterministically parsed from official .pdb files with verified SHA-256 provenance.*
+
 ## 🔌 Model Context Protocol (MCP) Architecture
 
 Bio-Atlas is exposed through the **Model Context Protocol (MCP)**, allowing AI IDEs (Claude Desktop, Antigravity, Cursor) and autonomous agents to invoke biomedical tools via standardized JSON-RPC 2.0 stdio:
