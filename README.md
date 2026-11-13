@@ -2,6 +2,8 @@
 
 ![Bio-Atlas Workstation Live Demo](assets/bio_atlas_demo.gif)
 
+> 🎬 **[Watch / Download Full 60s HD Demo Video (with soundtrack)](assets/bio_atlas_demo_60s_music.mp4)**
+
 ![Bio-Atlas Medical Orchestrator](assets/thumbnail.png)
 
 > **Sovereign Biomedical Intelligence, Genomic Variant Screening & 3D Macromolecular Visualizer**  
