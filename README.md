@@ -26,14 +26,6 @@
 
 ---
 
-## 🗺️ System Architecture & Sequence Infographic (AI vs MCP Engine)
-
-![Bio-Atlas Dual-Brain Architecture Infographic](assets/infographie_architecture_bio_atlas.jpg)
-
-*Interactive HTML Infographic & MobiDetails Cross-Validation Matrix available in [`demo/infographie.html`](demo/infographie.html).*
-
----
-
 ## 🎯 1. Why Bio-Atlas Exists & What Real Problem It Solves
 
 In modern clinical oncology and medical genetics, interpreting High-Throughput Genomic Sequencing data (NGS `.vcf` files) and projecting mutations onto protein 3D structures is critical for targeted therapy selection. However, clinicians face three major bottlenecks:
